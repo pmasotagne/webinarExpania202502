@@ -1,0 +1,61 @@
+### Eliminar puntos finales
+
+rule "afegir sufix al final de la 650" 
+priority 10 
+when 
+	(exists "650") 
+then 
+	suffix "650.z" with "temporary_suffix_to_replace" if (exists "650.z") 
+	suffix "650.a" with "temporary_suffix_to_replace" if (exists "650.a") 
+	suffix "650.x" with "temporary_suffix_to_replace" if (exists "650.x") 
+end 
+
+rule "eliminar punt final de la 650" 
+priority 9 
+when 
+	(exists "650") 
+then 
+	replaceContents "650.z.\\\\.temporary_suffix_to_replace" with "" if (exists "650.z") 
+	replaceContents "650.a.\\\\.temporary_suffix_to_replace" with "" if (exists "650.a") 
+	replaceContents "650.x.\\\\.temporary_suffix_to_replace" with "" if (exists "650.x") 
+end 
+
+rule "eliminar el sufix si no hi havia punt de la 650" 
+priority 8 
+when 
+	(exists "650") 
+then 
+	replaceContents "650.z.temporary_suffix_to_replace" with "" if (exists "650.z") 
+	replaceContents "650.a.temporary_suffix_to_replace" with "" if (exists "650.a") 
+	replaceContents "650.x.temporary_suffix_to_replace" with "" if (exists "650.x") 
+end 
+
+rule "afegir sufix al final de la 651" 
+priority 10 
+when 
+	(exists "651") 
+then 
+	suffix "651.z" with "temporary_suffix_to_replace" if (exists "651.z") 
+	suffix "651.a" with "temporary_suffix_to_replace" if (exists "651.a") 
+	suffix "651.x" with "temporary_suffix_to_replace" if (exists "651.x") 
+end 
+
+rule "eliminar punt final de la 651" 
+priority 9 
+when 
+	(exists "651") 
+then 
+	replaceContents "651.z.\\\\.temporary_suffix_to_replace" with "" if (exists "651.z") 
+	replaceContents "651.a.\\\\.temporary_suffix_to_replace" with "" if (exists "651.a") 
+	replaceContents "651.x.\\\\.temporary_suffix_to_replace" with "" if (exists "651.x") 
+end 
+
+rule "eliminar el sufix si no hi havia punt de la 651" 
+priority 8 
+when 
+	(exists "651") 
+then 
+	replaceContents "651.z.temporary_suffix_to_replace" with "" if (exists "651.z") 
+	replaceContents "651.a.temporary_suffix_to_replace" with "" if (exists "651.a") 
+	replaceContents "651.x.temporary_suffix_to_replace" with "" if (exists "651.x") 
+end 

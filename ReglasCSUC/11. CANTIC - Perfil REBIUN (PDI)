@@ -1,0 +1,58 @@
+### CANTIC - Perfil REBIUN (PDI)
+
+rule "Perfil REBIUN" 
+when 
+	(TRUE) 
+then 
+	addField "024.{7,-}.a.eliminar" 
+	addSubField "024.{7,-}.2.orcid" if (exists "024.{7,-}.a.eliminar") 
+	addSubField "024.{7,-}.1.https://orcid.org/" if (exists "024.{7,-}.2.orcid") 
+	ReplaceContents "024.a.eliminar" with " " 
+	ReplaceContents "024.a" with "(número)" if (exists "024.{7,-}.2.orcid") 
+	addField "024.{7,-}.a.eliminar" 
+	addSubField "024.2.datoses" if (exists "024.{7,-}.a.eliminar") 
+	addSubField "024.1.http://datos.bne.es/" if (exists "024.2.datoses") 
+	ReplaceContents "024.a.eliminar" with " " 
+	ReplaceContents "024.a" with "(número)" if (exists "024.{7,-}.2.datoses") 
+	addField "024.{7,-}.a.eliminar" 
+	addSubField "024.2.isni" if (exists "024.{7,-}.a.eliminar") 
+	addSubField "024.1.http://isni.org/isni" if (exists "024.2.isni") 
+	ReplaceContents "024.a.eliminar" with " " 
+	ReplaceContents "024.a" with "(número)" if (exists "024.{7,-}.2.isni") 
+	addField "024.{8,-}.0.https://dialnet.unirioja.es/servlet/autor?codigo=" 
+	addField "024.{7,-}.a.eliminar" 
+	addSubField "024.2.wikidata" if (exists "024.a.eliminar") 
+	addSubField "024.1.http://www.wikidata.org/ (Opcional)" if (exists "024.2.wikidata") 
+	ReplaceContents "024.a.eliminar" with " " 
+	ReplaceContents "024.a" with "(número)" if (exists "024.{7,-}.2.wikidata") 
+	addField "024.{7,-}.a.eliminar" 
+	addSubField "024.2.scopus" if (exists "024.a.eliminar") 
+	addSubField "024.0.https://www.scopus.com/authid/detail.uri?authorId= (Opcional)" if (exists "024.2.scopus") 
+	ReplaceContents "024.a.eliminar" with " " 
+	ReplaceContents "024.a" with "(número)" if (exists "024.{7,-}.2.scopus") 
+	addField "046.f.ANYX-MS-DI" 
+	addSubField "046.g.ANYX-MS-DI" if (exists "046.f.ANYX-MS-DI") 
+	addSubField "046.2.edtf" if (exists "046.g.ANYX-MS-DI") 
+	addField "368.a.(Opcional)" 
+	addField "370.a.(Opcional)" 
+	addField "372.a.eliminar" 
+	addSubField "372.2.lemac" if (exists "372.a.eliminar") 
+	ReplaceContents "372.a.eliminar" with " " 
+	addField "373.a.Universitat de Barcelona" 
+	addSubField "373.2.cantic" if (exists "373.a.Universitat de Barcelona") 
+	addSubField "373.s.ANY" if (exists "373.2.cantic") 
+	addSubField "373.t.ANY (Opcional)" if (exists "373.s.ANY") 
+	addField "374.a.eliminar" 
+	addSubField "374.2.lemac" if (exists "374.a.eliminar") 
+	ReplaceContents "374.a.eliminar" with " " 
+	addField "375.a.masculí/femení (Opcional)" 
+	addField "377.a.eliminar" 
+	addSubField "377.l.(Opcional)" if (exists "377.l.eliminar") 
+	ReplaceContents "377.a.eliminar" with " " 
+	addField "510.{2,-}.w.r" 
+	addSubField "510.i.Ocupador:" if (exists "510.w.r") 
+	addSubField "510.a.Universitat de Barcelona" if (exists "510.i.Ocupador:") 
+	addSubField "510.1.https://www.wikidata.org/wiki/Q219615" if (exists "510.a.Universitat de Barcelona") 
+	addField "856.{4,-}.u.http://diposit.ub.edu/dspace/browse?type=author&value=" 
+	addSubField "856.y.Dipòsit Digital de la Universitat de Barcelona (Opcional)" if (exists "856.u.http://diposit.ub.edu/dspace/browse?type=author&value=") 
+end 

@@ -1,0 +1,33 @@
+rule "Canvis VIAF" 
+when 
+	(TRUE) 
+then 
+	copyField "024" to "TMP" if (exists "024.{7,*}.2.uri") 
+	removeSubField "TMP.2" 
+	ReplaceContents "TMP.a.http://viaf.org/viaf/" with " " 
+	addSubField "TMP.2.viaf" 
+	copyField "024" to "TMP" if (exists "024.{7,*}.2.uri") 
+	changeSubField "TMP.a" to "1" if (exists "TMP.{7,*}.a.http://viaf.org/viaf/*") 
+	combineFields "TMP" excluding "2" 
+	removeField "024" if (exists "024.{7,*}.2.uri") 
+	changeField "TMP" to "024" 
+	addField "915.a.TmpCantic2Lemac" 
+end 
+
+###################
+ 
+rule "Afegir 908 + 856 UdG" 
+when 
+	(TRUE)
+then 
+	addSubField "908.a.UdG" if (not exists "908.a.UdG") 
+	copyField "856" to "TMP" if (exists "856.u.*unebook*") 
+	removesubfield "TMP.z" 
+	correctDuplicateFields "TMP" 
+	addField "915.z.Accés restringit als usuaris de la UdG" 
+	changeField "TMP" to "915" 
+	combineFields "915" excluding "" 
+	changeField "915" to "856" 
+	changeFirstIndicator "856" to "4" 
+	changeSecondIndicator "856" to "0" 
+end 

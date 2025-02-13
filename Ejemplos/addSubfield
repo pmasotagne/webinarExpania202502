@@ -1,0 +1,8 @@
+rule "Canvi de matèries" 
+when 
+    (TRUE) 
+then 
+    addSubField "65*.2.lemac" if (exists "65*.{*,4}.a.Textos") 
+    changeFirstIndicator "65*" to "" if (exists "65*.{*,4}.a.Textos") 
+    changeSecondIndicator "65*" to "7" if (exists "65*.{*,4}.a.Textos") 
+end 

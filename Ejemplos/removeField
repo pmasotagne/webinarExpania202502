@@ -1,0 +1,6 @@
+rule "Esborrar 856"  
+when  
+  (TRUE)  
+then 
+  removeField "856" if (exists "856.z.Accés restringit als membres de l'UJI") 
+end 

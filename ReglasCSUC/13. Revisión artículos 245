@@ -1,0 +1,103 @@
+### Revisión artículos 240
+
+rule "Fix 2nd indicator for English" 
+when 
+	(existsControl "008.{35,3}.eng") 
+then 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.The *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.An *") 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.A *") 
+end 
+
+rule "Fix 2nd indicator for French" 
+when 
+	(existsControl "008.{35,3}.fre") 
+then 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.La *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Le *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Les *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Un *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Une *") 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.L'*") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Des *") 
+end 
+
+rule "Fix 2nd indicator for Spanish" 
+when 
+	(existsControl "008.{35,3}.spa") 
+then 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.El *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.La *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Las *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Los *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Uno *") 
+	changeSecondIndicator "245" to "5" if (exists "245.{*,*}.a.Unos *") 
+	changeSecondIndicator "245" to "5" if (exists "245.{*,*}.a.Unas *") 
+end 
+
+rule "Fix 2nd indicator for Catalan" 
+when 
+	(existsControl "008.{35,3}.cat") 
+then 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.El *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Els *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.La *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Les *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Uns *") 
+	changeSecondIndicator "245" to "5" if (exists "245.{*,*}.a.Unes *") 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.L' *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Lo *") 
+end 
+
+rule "Fix 2nd indicator for German" 
+when 
+	(existsControl "008.{35,3}.ger") 
+then 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Das *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Der *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Din *") 
+	changeSecondIndicator "245" to "5" if (exists "245.{*,*}.a.Dine *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Die *") 
+end 
+
+rule "Fix 2nd indicator for Italian" 
+when 
+	(existsControl "008.{35,3}.ita") 
+then 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Gli *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Gl' *") 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.I *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Il *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.La *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Le *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Lo *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.L' *") 
+end 
+
+rule "Fix 2nd indicator for Dutch" 
+when 
+	(existsControl "008.{35,3}.dut") 
+then 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Een *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Het *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.De *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Des *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Der *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.'s *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.'t *") 
+	changeSecondIndicator "245" to "5" if (exists "245.{*,*}.a.Eene *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.'n *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Ene *") 
+end 
+
+rule "Fix 2nd indicator for Portuguese" 
+when 
+	(existsControl "008.{35,3}.por") 
+then 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.O *") 
+	changeSecondIndicator "245" to "2" if (exists "245.{*,*}.a.A *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Os *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.As *") 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.Um *") 
+	changeSecondIndicator "245" to "4" if (exists "245.{*,*}.a.Uma *") 
+end 

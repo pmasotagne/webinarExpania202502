@@ -1,0 +1,7 @@
+rule "Afegir h a 245 Recurs electrònic"
+when 
+	(not exists "245.h")
+then 
+	addSubField "245.h.[Recurs electrònic]" 
+	moveSubfieldsToEndOfField "245" "apnhbc"
+end 
