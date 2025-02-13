@@ -1,0 +1,22 @@
+### Regla para automatizar el traspaso de CANTIC a LEMAC (On Save)
+
+rule "Afegir 998 Modificat"
+when
+	((exists "900.a.CANTIC") OR (exists "900.a.NoCANTIC")) AND (exists "908.2.globuslemac") AND (not exists "998.a.Modificat") AND (existsControl "008.{15,1}.a") AND (not exists "915.a.TmpCantic2Lemac") 
+then
+	addField "998.a.Modificat"
+end 
+
+rule "Afegir 998 Nous"
+when
+	((exists "900.a.CANTIC") OR (exists "900.a.NoCANTIC")) AND (not exists "908.2.globuslemac") AND (not exists "908.2.globuscantic") AND (not exists "998.a.Nou") AND (existsControl "008.{15,1}.a") AND (not exists "915.a.TmpCantic2Lemac") 
+then
+	addField "998.a.Nou"
+end 
+
+rule "Esborrar 915 Temporal" 
+when 
+	exists "915.a.TmpCantic2Lemac" 
+then 
+	removeField "915" if (exists "915.a.TmpCantic2Lemac")
+end 

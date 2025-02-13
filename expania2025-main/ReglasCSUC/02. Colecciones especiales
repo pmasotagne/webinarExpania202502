@@ -1,0 +1,71 @@
+### Colecciones especiales
+
+rule "ColEsp: Vídeo"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Vídeo") AND (existsControl "LDR.{6,1}.g")
+then
+	addField "919.a.Col·lecció especial: Vídeo"
+end
+
+rule "ColEsp: Revistes"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Revista") AND ((existsControl "LDR.{7,1}.i") OR (existsControl "LDR.{7,1}.s"))
+then
+	addField "919.a.Col·lecció especial: Revista"
+end
+
+rule "ColEsp: Partitures"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Partitura") AND ((existsControl "LDR.{6,1}.c") OR (existsControl "LDR.{6,1}.d"))
+then
+	addField "919.a.Col·lecció especial: Partitura"
+end
+
+rule "ColEsp: Objectes"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Objecte") AND ((existsControl "LDR.{6,1}.o") OR (existsControl "LDR.{6,1}.r"))
+then
+	addField "919.a.Col·lecció especial: Objecte"
+end
+
+rule "ColEsp: Mapes"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Mapa") AND ((existsControl "LDR.{6,1}.e") OR (existsControl "LDR.{6,1}.f"))
+then
+	addField "919.a.Col·lecció especial: Mapa"
+end
+
+rule "ColEsp: Enregistraments sonors"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Enregistrament sonor") AND ((existsControl "LDR.{6,1}.i") OR (existsControl "LDR.{6,1}.j"))
+then
+	addField "919.a.Col·lecció especial: Enregistrament sonor"
+end
+
+rule "ColEsp: Manuscrits"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Manuscrit") AND (existsControl "LDR.{6,1}.t")
+then
+	addField "919.a.Col·lecció especial: Manuscrit"
+end
+
+rule "ColEsp: Material gràfic"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Material gràfic") AND (existsControl "LDR.{6,1}.k")
+then
+	addField "919.a.Col·lecció especial: Material gràfic"
+end
+
+rule "ColEsp: Altres"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Altres") AND ((existsControl "LDR.{6,1}.a") OR (existsControl "LDR.{6,1}.m") OR (existsControl "LDR.{6,1}.p"))
+then
+	addField "919.a.Col·lecció especial: Altres"
+end
+
+rule "ColEsp: Digitalitzades"
+when
+	((exists "655.a.Col·leccions especials") OR (exists "655.a.Col·leccions especials.*")) AND (not exists "919.a.Col·lecció especial: Digitalitzades") AND ((exists "856.{4,0}") OR (exists "856.{4,1}"))
+then
+ 	addField "919.a.Col·lecció especial: Digitalitzades"
+end

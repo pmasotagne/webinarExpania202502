@@ -1,0 +1,15 @@
+rule "Canviar posició 33" 
+when 
+	(TRUE) 
+then 
+	replaceControlContents "008.{33,1}" with "v" 
+end 
+
+rule "Canviar idioma" 
+when 
+	(TRUE) 
+then 
+	replaceControlContents "008.{35,3}" with "spa" 
+end
+
+*El segundo número de la parte {XX, X} corresponde al número de carácteres que afecta el cambio.

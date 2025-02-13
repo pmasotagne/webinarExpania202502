@@ -1,0 +1,6 @@
+rule "afegir 007" 
+when 
+    (TRUE) 
+then 
+    addControlField "007.cr#|||||||||||" 
+end 

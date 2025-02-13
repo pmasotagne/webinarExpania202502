@@ -1,0 +1,13 @@
+rule "Netejar duplicats 69x" 
+when 
+	(exists "655.a.Llibres electrònics") AND (exists "655.2.thub") 
+then 
+	correctDuplicateFields "691" 
+	correctDuplicateFields "693" 
+	correctDuplicateFields "694" 
+	correctDuplicateFields "695" 
+	correctDuplicateFields "696" 
+	correctDuplicateFields "697" 
+	correctDuplicateFields "698" 
+	correctDuplicateFields "699" 
+end 

@@ -1,0 +1,9 @@
+rule "Add system number from 001 prefixed by .ES-BaCBU" 
+when 
+	(TRUE) 
+then 
+	copyField "001" to "035.a" 
+	replaceContents "035.a.\\\\." with "" 
+	prefix "035.a" with "(ES-BaCBU)" if (not exists "035.a.(ES-BaCBU)") 
+	suffix "035.a" with "-34csuc_network" 
+end 

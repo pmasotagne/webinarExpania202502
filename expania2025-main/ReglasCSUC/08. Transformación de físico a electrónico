@@ -1,0 +1,148 @@
+### Transformación de físico a electrónico (Enhance Record)
+
+rule "Canvi Capçalera 18 i" 
+when 
+	(TRUE) 
+then 
+	replaceControlContents "LDR.{18,1}" with "i" if (existsControl "LDR.{18,1}") 
+end 
+
+rule "007" 
+when 
+	(TRUE) 
+then 
+	addControlField "007.cr#|||||||||||" 
+end 
+
+rule "008 23" 
+when 
+	(TRUE) 
+then 
+	replaceControlContents "008.{23,1}" with "o" 
+end 
+
+rule "020 a a z" 
+when 
+	(TRUE) 
+then 
+	changeSubField "020.a" to "z" 
+	addSubField "020.q.(imprès)" if (exists "020.z") 
+end 
+
+rule "Afegir 040 e" 
+when 
+	(not exists "040.e") 
+then 
+	splitSubField "040.a.*" to "915.a" 
+	splitSubField "040.b.*" to "915.b" 
+	AddField "915.e.rda" 
+	splitSubField "040.c.*" to "915.c" 
+	splitSubField "040.d.*" to "915.d" 
+	removeField "040" 
+	combineFields "915" excluding "" 
+	copyField "915" to "040" 
+	removeField "915" 
+end 
+
+rule "260 a 264" 
+when 
+	(exists "260.a") 
+then 
+	ChangeField "260" to "264" 
+	ChangeSecondIndicator "264" to "1" 
+end 
+
+rule "300 recurs en línia" 
+when 
+	(exists "300") 
+then 
+	removeField "300" 
+	addField "300.a.1 recurs en línia (xxx pàgines)"  
+end 
+
+rule "Afegir 336" 
+when 
+	(TRUE) 
+then 
+	removeField "336" if (exists "336") 
+	addField "336.{-,-}.a.text"  
+	addSubfield "336.{-,-}.b.txt" if ( not exists "336.b" ) 
+	addSubfield "336.{-,-}.2.rdacontent" if ( not exists "336.2") 
+end 
+
+rule "Afegir 337" 
+when 
+	(TRUE) 
+then 
+	removeField "337" if (exists "337") 
+	addField "337.{-,-}.a.informàtic" 
+	addSubfield "337.{-,-}.b.c" if ( not exists "337.b" ) 
+	addSubfield "337.{-,-}.2.rdamedia" if ( not exists "337.2") 
+end 
+
+rule "Afegir 338" 
+when 
+	(TRUE) 
+then 
+	removeField "338" if (exists "338") 
+	addField "338.{-,-}.a.recurs en línia" 
+	addSubfield "338.{-,-}.b.cr" if ( not exists "338.b" ) 
+	addSubfield "338.{-,-}.2.rdacarrier" if ( not exists "338.2") 
+end 
+
+rule "Afegir 588" 
+when 
+	(not exists "588") 
+then 
+	addField "588.a.Descripció del recurs: xx de xx de xxxx" 
+end 
+
+rule "Afegir 856" 
+when 
+	(TRUE) 
+then 
+	addField "856.{4,0}.z.Accés restringit als usuaris de XXX" 
+	addSubField "856.u.https//" 
+end 
+
+rule "Afegir terme de relació 100" 
+when 
+	(not exists "100.e") 
+then 
+	addSubfield "100.e.(Afegir)" 
+end 
+
+rule "Afegir terme de relació 110" 
+when 
+	(not exists "110.e") 
+then 
+	addSubfield "110.e.(Afegir)" 
+end 
+
+rule "Afegir terme de relació 111" 
+when 
+	(not exists "111.e") 
+then 
+	addSubfield "111.e.(Afegir)" 
+end 
+
+rule "Afegir terme de relació 700" 
+when 
+	(not exists "700.e") 
+then 
+	addSubfield "700.e.(Afegir)"  if (not exists "700.5") 
+end 
+
+rule "Afegir terme de relació 710" 
+when 
+	(not exists "710.e") 
+then 
+	addSubfield "710.e.(Afegir)"  if (not exists "710.5") 
+end 
+
+rule "Afegir terme de relació 711" 
+when 
+	(not exists "711.e") 
+then 
+	addSubfield "711.e.(Afegir)" if (not exists "711.5") 
+end 

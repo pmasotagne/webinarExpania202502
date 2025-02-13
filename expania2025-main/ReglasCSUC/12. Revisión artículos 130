@@ -1,0 +1,103 @@
+### Revisión artículos 130
+
+rule "Fix 1st indicator for English"  
+when  
+	(existsControl "008.{35,3}.eng")  
+then  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.The *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.An *")  
+	changeFirstIndicator "130" to "2" if (exists "130.{*,*}.a.A *")  
+end  
+
+rule "Fix 1st indicator for French"  
+when  
+	(existsControl "008.{35,3}.fre")  
+then  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.La *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Le *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Les *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Un *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Une *")  
+	changeFirstIndicator "130" to "2" if (exists "130.{*,*}.a.L'*")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Des *")  
+end  
+
+rule "Fix 1st indicator for Spanish"  
+when  
+	(existsControl "008.{35,3}.spa")  
+then  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.El *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.La *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Las *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Los *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Uno *")  
+	changeFirstIndicator "130" to "5" if (exists "130.{*,*}.a.Unos *")  
+	changeFirstIndicator "130" to "5" if (exists "130.{*,*}.a.Unas *")  
+end  
+
+rule "Fix 2nd indicator for Català" 
+when 
+	(existsControl "008.{35,3}.cat") 
+then 
+	changeFirstIndicator "130" to "3" if (exists "245.{*,*}.a.El *") 
+	changeFirstIndicator "130" to "4" if (exists "245.{*,*}.a.Els *") 
+	changeFirstIndicator "130" to "3" if (exists "245.{*,*}.a.La *") 
+	changeFirstIndicator "130" to "4" if (exists "245.{*,*}.a.Les *") 
+	changeFirstIndicator "130" to "4" if (exists "245.{*,*}.a.Uns *") 
+	changeFirstIndicator "130" to "5" if (exists "245.{*,*}.a.Unes *") 
+	changeFirstIndicator "130" to "2" if (exists "245.{*,*}.a.L' *") 
+	changeFirstIndicator "130" to "3" if (exists "245.{*,*}.a.Lo *") 
+end 
+
+rule "Fix 1st indicator for German"  
+when  
+	(existsControl "008.{35,3}.ger")  
+then  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Das *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Der *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Din *")  
+	changeFirstIndicator "130" to "5" if (exists "130.{*,*}.a.Dine *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Die *")  
+end  
+
+rule "Fix 1st indicator for Italian"  
+when  
+	(existsControl "008.{35,3}.ita")  
+then  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Gli *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Gl' *")  
+	changeFirstIndicator "130" to "2" if (exists "130.{*,*}.a.I *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Il *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.La *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Le *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Lo *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.L' *")  
+end  
+
+rule "Fix 1st indicator for Dutch"  
+when  
+	(existsControl "008.{35,3}.dut")  
+then  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Een *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Het *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.De *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Des *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Der *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.'s *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.'t *")  
+	changeFirstIndicator "130" to "5" if (exists "130.{*,*}.a.Eene *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.'n *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Ene *")  
+end  
+
+rule "Fix 1st indicator for Portuguese"  
+when  
+	(existsControl "008.{35,3}.por")  
+then  
+	changeFirstIndicator "130" to "2" if (exists "130.{*,*}.a.O *")  
+	changeFirstIndicator "130" to "2" if (exists "130.{*,*}.a.A *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Os *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.As *")  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.Um *")  
+	changeFirstIndicator "130" to "4" if (exists "130.{*,*}.a.Uma *")  
+end 
