@@ -12,7 +12,7 @@ Ejemplo: Elimina las siglas de la institución UPC en la etiqueta 908 i de la 85
 3. Se ha hecho un registro de autoridad de una materia "Economia financiera", y queremos actualizar el literal de aquellas etiquetas 650 #4 "Economia y finanzas", también modificando el primer indicador por "blanco" y el segundo por "7", y añadiendo $$2 lemac.
 
 ## Nivel avanzado​
-Ejemplo: Añadir las siglas de tu institución en la etiqueta 908 y crear la 856 de tu institución a partir de una ya existente. (Afegir 908 + 856 UdG (2)"​
+Ejemplo: Añadir las siglas de tu institución en la etiqueta 908 y crear la 856 de tu institución a partir de una ya existente.
 1. Elimina los puntos finales de las etiquetas 650 del registro​.
 2. Añade un subcampo $$y en la etiqueta 650 #7 Economia mundial, y reordena sus subcampos​.
 3. Crea una nueva etiqueta 856 dónde el $$u finalice con el contenido de la etiqueta 020 $$a.
