@@ -1,0 +1,10 @@
+rule "Añadir 856 con contenido de la 020"
+when 
+	(exists "020.a")
+then 
+	addField "TMP.{4,0}.z.Acceso restringido a los usuarios de la XXX"
+	addField "TMP.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=XXXX&password=XXXXX&redirectto=/ebook/show/"
+	suffixSubField "TMP.u" with "020.a" 
+	combineFields "TMP" excluding "" 
+	changeField "TMP" to "856" 
+end 

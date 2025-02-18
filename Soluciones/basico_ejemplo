@@ -1,0 +1,7 @@
+rule "Fons de Briologia: afegir 730" 
+when 
+  (not exists "730.a.Fons de Briologia (Universitat Autònoma de Barcelona)") 
+then 
+  addField "730.a.Fons de Briologia (Universitat Autònoma de Barcelona)"  
+  addSubField "730.5.ES-BaUAB" if (exists "730.a.Fons de Briologia (Universitat Autònoma de Barcelona)") 
+end 

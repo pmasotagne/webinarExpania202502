@@ -1,0 +1,15 @@
+rule "Eliminar 908 i 856 UPC"  
+when  
+  (TRUE) 
+then 
+  splitSubField "908.a.*" to "915.a" 
+  removeField "908" 
+  removeField "915" if (exists "915.a.UPC") 
+  combineFields "915" excluding "" 
+  copyField "915" to "908" 
+  removeField "915" 
+  ReplaceContents "856.z.UPC," with "" 
+  ReplaceContents "856.z., UPC" with "" 
+  ReplaceContents "856.z.UPC i" with "i" 
+  ReplaceContents "856.z.i UPC" with "" 
+end 

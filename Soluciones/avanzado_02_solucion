@@ -1,0 +1,7 @@
+rule "Añadir subcamp y a Economia mundial"
+when  
+    (TRUE) 
+then  
+    addSubField "650.y.S. XX" if (exists "650.a.Economia mundial") 
+    moveSubfieldsToEndOfField "650" "2" 
+end 

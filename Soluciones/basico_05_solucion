@@ -1,0 +1,8 @@
+rule "Crear 035 Grup B - 1"
+when
+    (TRUE)
+then
+    addSystemNumber "TMP.a" from "001" prefixed by ""
+    prefix "TMP.a" with "(ES-BaCBU)"
+    changeField "TMP" to "035"
+end

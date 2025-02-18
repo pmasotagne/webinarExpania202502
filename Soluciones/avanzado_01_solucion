@@ -1,0 +1,29 @@
+rule "añadir sufijo al final de la 650"
+priority 10 
+when 
+    (exists "650") 
+then 
+    suffix "650.z" with "temporary_suffix_to_replace" if (exists "650.z") 
+    suffix "650.a" with "temporary_suffix_to_replace" if (exists "650.a") 
+    suffix "650.x" with "temporary_suffix_to_replace" if (exists "650.x") 
+end 
+
+rule "eliminar punto final de la 650" 
+priority 9 
+when 
+    (exists "650") 
+then 
+    replaceContents "650.z.\\\\.temporary_suffix_to_replace" with "" if (exists "650.z") 
+    replaceContents "650.a.\\\\.temporary_suffix_to_replace" with "" if (exists "650.a") 
+    replaceContents "650.x.\\\\.temporary_suffix_to_replace" with "" if (exists "650.x") 
+end 
+
+rule "eliminar el sufijo si no existia punto en la 650"
+priority 8 
+when 
+    (exists "650") 
+then 
+    replaceContents "650.z.temporary_suffix_to_replace" with "" if (exists "650.z") 
+    replaceContents "650.a.temporary_suffix_to_replace" with "" if (exists "650.a") 
+    replaceContents "650.x.temporary_suffix_to_replace" with "" if (exists "650.x") 
+end 

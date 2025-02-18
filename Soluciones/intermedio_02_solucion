@@ -1,0 +1,6 @@
+rule "008 23" 
+when 
+   (existsControl "007") 
+then 
+   replaceControlContents "008.{23,1}" with "o" 
+end 

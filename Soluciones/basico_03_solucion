@@ -1,0 +1,13 @@
+rule "Corregir primer indicador para castellano"
+when  
+	(existsControl "008.{35,3}.spa")  
+then  
+	changeFirstIndicator "130" to "3" if (exists "130.{*,*}.a.El *")  
+end 
+
+rule "Corregir segundo indicador para castellano"
+when 
+	(existsControl "008.{35,3}.spa") 
+then 
+	changeSecondIndicator "245" to "3" if (exists "245.{*,*}.a.El *") 
+end 

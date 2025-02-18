@@ -1,0 +1,10 @@
+rule "040" 
+when 
+  (exists "040")
+then 
+  removeField "040" 
+  addField "040.a.ES-BaCBU" 
+  addSubField "040.b.cat" 
+  addSubField "040.e.rda" 
+  addSubField "040.c.ES-BaCBU" 
+end 

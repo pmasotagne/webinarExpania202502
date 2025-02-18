@@ -1,0 +1,9 @@
+rule "Cambio de materias y cambio de texto"
+when 
+    (TRUE) 
+then 
+    replaceContents "650.a.Economia y finanzas" with "Economia financiera" if (exists "650.{*,4}.a.Economia y finanzas")
+    addSubField "650.2.lemac" if (exists "650.{*,4}.a.Economia financiera") 
+    changeFirstIndicator "650" to "" if (exists "650.{*,4}.a.Economia financiera")
+    changeSecondIndicator "650" to "7" if (exists "650.{*,4}.a.Economia financiera") 
+end 
