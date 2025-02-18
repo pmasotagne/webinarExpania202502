@@ -318,7 +318,7 @@ when
 then 
 	copyField "856" to "915" if (exists "856.z.*UB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UB" with "Accés restringit als usuaris de la UAB" 
-	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=8zM8jgWE&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UB" with "Accés restringit als usuaris de la UPF" 
@@ -326,15 +326,15 @@ then
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UB" with "Accés restringit als usuaris de la UdG" 
-	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=YB6K1vL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UB" with "Accés restringit als usuaris de la URL" 
-	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=m3FirqTL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UB" with "Accés restringit als usuaris de la URV" 
-	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=N8FGKfP&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 end 
 	
@@ -344,7 +344,7 @@ when
 then 
 	copyField "856" to "915" if (exists "856.z.*UAB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UAB" with "Accés restringit als usuaris de la UB" 
-	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=LbMuJB&redirectto=/ebook/show/" 
+	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UAB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UAB" with "Accés restringit als usuaris de la UPF" 
@@ -352,15 +352,15 @@ then
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UAB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UAB" with "Accés restringit als usuaris de la UdG" 
-	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=YB6K1vL&redirectto=/ebook/show/" 
+	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UAB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UAB" with "Accés restringit als usuaris de la URL" 
-	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=m3FirqTL&redirectto=/ebook/show/" 
+	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UAB*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UAB" with "Accés restringit als usuaris de la URV" 
-	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=N8FGKfP&redirectto=/ebook/show/" 
+	replaceContents "915.u.http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 end 
 	
@@ -396,11 +396,11 @@ when
 then 
 	copyField "856" to "915" if (exists "856.z.*UdG*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UdG" with "Accés restringit als usuaris de la UB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=LbMuJB&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UdG*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UdG" with "Accés restringit als usuaris de la UAB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=8zM8jgWE&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UdG*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UdG" with "Accés restringit als usuaris de la UPF" 
@@ -408,11 +408,11 @@ then
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UdG*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UdG" with "Accés restringit als usuaris de la URL" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=m3FirqTL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*UdG*") 
 	replaceContents "915.z.Accés restringit als usuaris de la UdG" with "Accés restringit als usuaris de la URV" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=N8FGKfP&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 end 
 	
@@ -422,11 +422,11 @@ when
 then 
 	copyField "856" to "915" if (exists "856.z.*URL*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URL" with "Accés restringit als usuaris de la UB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=LbMuJB&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URL*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URL" with "Accés restringit als usuaris de la UAB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=8zM8jgWE&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URL*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URL" with "Accés restringit als usuaris de la UPF" 
@@ -434,11 +434,11 @@ then
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URL*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URL" with "Accés restringit als usuaris de la UdG" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=YB6K1vL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URL*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URL" with "Accés restringit als usuaris de la URV" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=N8FGKfP&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 end 
 	
@@ -448,11 +448,11 @@ when
 then 
 	copyField "856" to "915" if (exists "856.z.*URV*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URV" with "Accés restringit als usuaris de la UB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=LbMuJB&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.nubedelectura.com/cloudLibrary/login/login?username=CRAIUB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URV*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URV" with "Accés restringit als usuaris de la UAB" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=8zM8jgWE&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "http://biblioteca.tirant.com/cloudLibrary/login/login?username=UAB&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URV*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URV" with "Accés restringit als usuaris de la UPF" 
@@ -460,10 +460,10 @@ then
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URV*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URV" with "Accés restringit als usuaris de la UdG" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=YB6K1vL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=UGIRONA&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 	copyField "856" to "915" if (exists "856.z.*URV*") 
 	replaceContents "915.z.Accés restringit als usuaris de la URV" with "Accés restringit als usuaris de la URL" 
-	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=m3FirqTL&redirectto=/ebook/show/" 
+	replaceContents "915.u.https://biblioteca.tirant.com/cloudLibrary/login/login?username=URV&password=XXXXXX&redirectto=/ebook/show/" with "https://biblioteca.tirant.com/cloudLibrary/login/login?username=ESADE&password=XXXXXX&redirectto=/ebook/show/" 
 	changeField "915" to "856" 
 end 
